@@ -8,14 +8,15 @@ def rand_rgb():
   return tuple(rand_int_list)
 
 t = Turtle()
+
 colors = []
 
 for i in range (3, 11):
   colors.append(rand_rgb())
   for j in range(i):
-    degree = 360 / i
+    angle = 360 / i
     t.pencolor(colors[i - 3])
-    t.right(degree)
+    t.right(angle)
     t.forward(100)
 
 screen = Screen()
