@@ -1,5 +1,4 @@
 import turtle as t
-import heroes
 
 timmy = t.Turtle()
 for _ in range(4):
