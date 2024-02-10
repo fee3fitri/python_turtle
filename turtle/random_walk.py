@@ -8,7 +8,7 @@ def rand_rgb():
   return tuple(rand_int_list)
 
 def rand_direction():
-  direction_list = ['forward', 'backward', 'left', 'right']
+  direction_list = [0, 90, 180, 270]
   return random.choice(direction_list)
 
 t = Turtle()
@@ -21,15 +21,7 @@ border_x, border_y = s.screensize()
 while pos_x < border_x or pos_y < border_y or pos_x > -border_x or pos_y > -border_y:
   t.pencolor(rand_rgb())
   direction = rand_direction()
-  if direction == 'left':
-    t.left(90)
-    t.forward(30)
-  elif direction == 'right':
-    t.right(90)
-    t.forward(30)
-  elif direction == 'forward':
-    t.forward(30)
-  else:
-    t.backward(30)
+  t.forward(30)
+  t.setheading(direction)
 
 s.exitonclick()
