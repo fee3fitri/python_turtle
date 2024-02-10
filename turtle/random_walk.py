@@ -13,6 +13,7 @@ def rand_direction():
 
 t = Turtle()
 t.pensize(15)
+t.speed(0)
 pos_x, pos_y = t.pos()
 
 s = Screen()
