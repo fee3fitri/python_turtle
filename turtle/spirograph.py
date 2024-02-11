@@ -9,13 +9,13 @@ def rand_rgb():
 
 t = Turtle()
 t.speed(0)
-division = 6
-num_circle = 360 // division
+size_of_gap = 6
+num_circle = 360 // size_of_gap
 
 for i in range(num_circle):
   t.pencolor(rand_rgb())
   t.circle(100)
-  t.left(division)
+  t.left(size_of_gap)
 
 s = Screen()
 s.exitonclick()
